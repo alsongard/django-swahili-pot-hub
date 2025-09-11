@@ -1,0 +1,16 @@
+{
+	"name": "src",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"devDependencies": {
+		"tailwindcss": "^3.4.17"
+	},
+	"scripts": {
+		"dev": "tailwindcss -i ./static/src/css/input.css -o ./static/css/output.css --watch",
+		"build": "tailwindcss -i ./static/src/css/input.css -o ./static/css/output.css --minify"
+	}
+}
