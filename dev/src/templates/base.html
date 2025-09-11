@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link  rel="stylesheet" href="{% static 'css/output.css' %}">
+        <title>Swahili Port Hub</title>
+        <style>
+            body
+            {
+                padding:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            header
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: centers;
+            }
+            nav
+            {
+                display: flex;
+                flex-direction: row;
+            }
+            nav > ul 
+            {
+                list-style: none;
+                display: flex;
+                flex-direction:row;
+                width:500px;
+                justify-content: space-between;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Swahili port Hub</h1>
+        <nav>
+            <ul>
+                <li class="text-blue-300">Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div>
+            <button class="bg-black">Login</button>
+        </div>
+    </header>
+    {% block content %}
+        replace me
+    {% endblock %}
+    
+</body>
+</html>
