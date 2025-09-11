@@ -1,11 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    
-</body>
-</html>
+{%extends "base.html"%}
+
+{% block content%}
+
+<div>
+    <h1>About Page</h1>
+    <p>Welcome to Swahilipot hub about page</p>
+    {{my_text}} {{my_number}}
+    <ul>{% for item in my_list %}
+        <li>{{forloop.counter}} {{item}}</li>
+    {%endfor%}
+    </ul>
+
+
+    <ul>{%for item in grades %}
+        {%if item == "A"%}
+            <p>{{item}} is answer</p>
+        {%endif%}
+        {%endfor%}
+    </ul>
+
+
+
+
+
+
+ 
+</div>
+
+{% endblock %}
