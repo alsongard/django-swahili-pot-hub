@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls</title>
+</head>
+<body>
+    <div>
+        <!-- check if context exists -->
+         <h1>Welcome to Question View Details</h1>
+            {%if retrieved_questions %}
+    
+                {% for item in retrieved_questions %}
+                <div>
+                    <p>id: {{item.id}}</p>
+                    <p><a href="{% url 'detail' item.id%}">{{item.question_name}}</p></a>
+                    <p>{{item.pub_date}}</p>
+                </div>
+                {%endfor%}
+    
+            {%else%}
+                <p>No Questions in DB</p>
+            {%endif%}
+    </div>
+    
+</body>
+</html>
+
+

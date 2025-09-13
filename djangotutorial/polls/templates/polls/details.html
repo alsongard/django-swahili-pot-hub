@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1>You're Viewing Details Page</h1>
+    <!-- check if dictionary exists -->
+    {% if question %}
+        <p>Quetion: {{question}}</p>
+        {% if question.choice_set.all.count == 0%}
+            <p>No choices for the given question</p>
+        {%endif%}
+        {% for choice in question.choice_set.all %}
+            <p>Choice: {{choice.choice}}</p>
+        {%endfor%}
+    {%endif%}
+</body>
+</html>
